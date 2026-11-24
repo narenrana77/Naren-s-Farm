@@ -1,0 +1,10 @@
+{
+  "name": "Naren's Farm Tracker",
+  "description": "Smart Farm Management & Accounting (Hisab Kitab) with Hay Day style visual farm simulator, real-time weather, machinery/labour/chemical ledgers, Aadti Cr/Dr khata, charts, and cloud sync.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

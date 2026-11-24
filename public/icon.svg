@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b" />
+      <stop offset="50%" stop-color="#047857" />
+      <stop offset="100%" stop-color="#065f46" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="50%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#86efac" />
+      <stop offset="100%" stop-color="#22c55e" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Background Squircle -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+
+  <!-- Inner Soft Border -->
+  <rect x="16" y="16" width="480" height="480" rx="96" fill="none" stroke="#34d399" stroke-width="4" stroke-opacity="0.3" />
+
+  <!-- Sun Rays / Horizon in Background -->
+  <circle cx="256" cy="270" r="140" fill="#fef3c7" fill-opacity="0.15" />
+  <circle cx="256" cy="270" r="100" fill="#fef3c7" fill-opacity="0.2" />
+
+  <!-- Main Farm Tractor & Wheat Illustration -->
+  <g filter="url(#shadow)">
+    <!-- Field Furrows / Ground -->
+    <path d="M 96 380 Q 256 340 416 380 L 416 410 Q 256 380 96 410 Z" fill="#047857" opacity="0.8" />
+    <path d="M 80 410 Q 256 370 432 410 L 432 430 Q 256 395 80 430 Z" fill="#065f46" />
+
+    <!-- Tractor Body (Stylized Clean Silhouette) -->
+    <!-- Large Rear Wheel -->
+    <circle cx="190" cy="330" r="54" fill="#1e293b" stroke="#f1f5f9" stroke-width="5" />
+    <circle cx="190" cy="330" r="38" fill="#334155" />
+    <circle cx="190" cy="330" r="18" fill="#fbbf24" />
+    <!-- Treads -->
+    <line x1="190" y1="276" x2="190" y2="292" stroke="#f1f5f9" stroke-width="4" />
+    <line x1="190" y1="368" x2="190" y2="384" stroke="#f1f5f9" stroke-width="4" />
+    <line x1="136" y1="330" x2="152" y2="330" stroke="#f1f5f9" stroke-width="4" />
+    <line x1="228" y1="330" x2="244" y2="330" stroke="#f1f5f9" stroke-width="4" />
+
+    <!-- Small Front Wheel -->
+    <circle cx="330" cy="345" r="36" fill="#1e293b" stroke="#f1f5f9" stroke-width="4" />
+    <circle cx="330" cy="345" r="24" fill="#334155" />
+    <circle cx="330" cy="345" r="12" fill="#fbbf24" />
+
+    <!-- Tractor Hood & Engine -->
+    <path d="M 230 310 L 340 310 Q 360 310 360 330 L 360 345 L 230 345 Z" fill="url(#goldGrad)" />
+    <!-- Exhaust Stack -->
+    <rect x="315" y="240" width="10" height="70" rx="3" fill="#64748b" />
+    <path d="M 315 240 Q 325 230 335 240" stroke="#64748b" stroke-width="5" fill="none" />
+
+    <!-- Cabin Roof & Glass -->
+    <path d="M 160 230 L 250 230 L 245 305 L 175 305 Z" fill="#0284c7" fill-opacity="0.6" stroke="#f8fafc" stroke-width="4" />
+    <rect x="150" y="222" width="110" height="12" rx="6" fill="#f8fafc" />
+
+    <!-- Wheat Sheaf Accent (Rising Behind Cabin) -->
+    <g transform="translate(350, 150)">
+      <path d="M 10 130 Q 30 60 50 10" stroke="url(#goldGrad)" stroke-width="5" fill="none" stroke-linecap="round" />
+      <!-- Grains -->
+      <ellipse cx="25" cy="80" rx="10" ry="18" transform="rotate(-30 25 80)" fill="url(#goldGrad)" />
+      <ellipse cx="45" cy="65" rx="10" ry="18" transform="rotate(30 45 65)" fill="url(#goldGrad)" />
+      <ellipse cx="32" cy="45" rx="9" ry="16" transform="rotate(-25 32 45)" fill="url(#goldGrad)" />
+      <ellipse cx="52" cy="35" rx="9" ry="16" transform="rotate(25 52 35)" fill="url(#goldGrad)" />
+      <ellipse cx="50" cy="12" rx="7" ry="14" fill="url(#goldGrad)" />
+    </g>
+
+    <g transform="translate(100, 160) scale(0.9)">
+      <path d="M 50 130 Q 30 60 10 10" stroke="url(#goldGrad)" stroke-width="5" fill="none" stroke-linecap="round" />
+      <ellipse cx="35" cy="80" rx="10" ry="18" transform="rotate(30 35 80)" fill="url(#goldGrad)" />
+      <ellipse cx="15" cy="65" rx="10" ry="18" transform="rotate(-30 15 65)" fill="url(#goldGrad)" />
+      <ellipse cx="28" cy="45" rx="9" ry="16" transform="rotate(25 28 45)" fill="url(#goldGrad)" />
+      <ellipse cx="8" cy="35" rx="9" ry="16" transform="rotate(-25 8 35)" fill="url(#goldGrad)" />
+      <ellipse cx="10" cy="12" rx="7" ry="14" fill="url(#goldGrad)" />
+    </g>
+
+    <!-- App Name Banner Text -->
+    <text x="256" y="468" text-anchor="middle" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="900" font-size="34" fill="#ffffff" letter-spacing="2">
+      FARM TRACKER
+    </text>
+  </g>
+</svg>

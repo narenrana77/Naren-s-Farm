@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGradMask" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b" />
+      <stop offset="50%" stop-color="#047857" />
+      <stop offset="100%" stop-color="#065f46" />
+    </linearGradient>
+    <linearGradient id="goldGradMask" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="50%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <filter id="shadowMask" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Full-bleed background (no rx) for maskable cropping -->
+  <rect width="512" height="512" fill="url(#bgGradMask)" />
+
+  <!-- Safe Zone Graphic scaled inside 80% box (approx 52px padding all around) -->
+  <g transform="translate(52, 52) scale(0.796)">
+    <!-- Sun Rays / Horizon in Background -->
+    <circle cx="256" cy="270" r="130" fill="#fef3c7" fill-opacity="0.15" />
+
+    <g filter="url(#shadowMask)">
+      <!-- Field Furrows / Ground -->
+      <path d="M 80 380 Q 256 340 432 380 L 432 410 Q 256 380 80 410 Z" fill="#047857" opacity="0.8" />
+      <path d="M 64 410 Q 256 370 448 410 L 448 430 Q 256 395 64 430 Z" fill="#065f46" />
+
+      <!-- Tractor Body -->
+      <circle cx="190" cy="330" r="54" fill="#1e293b" stroke="#f1f5f9" stroke-width="5" />
+      <circle cx="190" cy="330" r="38" fill="#334155" />
+      <circle cx="190" cy="330" r="18" fill="#fbbf24" />
+
+      <!-- Small Front Wheel -->
+      <circle cx="330" cy="345" r="36" fill="#1e293b" stroke="#f1f5f9" stroke-width="4" />
+      <circle cx="330" cy="345" r="24" fill="#334155" />
+      <circle cx="330" cy="345" r="12" fill="#fbbf24" />
+
+      <!-- Tractor Hood & Engine -->
+      <path d="M 230 310 L 340 310 Q 360 310 360 330 L 360 345 L 230 345 Z" fill="url(#goldGradMask)" />
+      <rect x="315" y="240" width="10" height="70" rx="3" fill="#64748b" />
+      <path d="M 315 240 Q 325 230 335 240" stroke="#64748b" stroke-width="5" fill="none" />
+
+      <!-- Cabin Roof & Glass -->
+      <path d="M 160 230 L 250 230 L 245 305 L 175 305 Z" fill="#0284c7" fill-opacity="0.6" stroke="#f8fafc" stroke-width="4" />
+      <rect x="150" y="222" width="110" height="12" rx="6" fill="#f8fafc" />
+
+      <!-- Wheat Sheaf Accent -->
+      <g transform="translate(340, 150)">
+        <path d="M 10 130 Q 30 60 50 10" stroke="url(#goldGradMask)" stroke-width="5" fill="none" stroke-linecap="round" />
+        <ellipse cx="25" cy="80" rx="10" ry="18" transform="rotate(-30 25 80)" fill="url(#goldGradMask)" />
+        <ellipse cx="45" cy="65" rx="10" ry="18" transform="rotate(30 45 65)" fill="url(#goldGradMask)" />
+        <ellipse cx="32" cy="45" rx="9" ry="16" transform="rotate(-25 32 45)" fill="url(#goldGradMask)" />
+        <ellipse cx="52" cy="35" rx="9" ry="16" transform="rotate(25 52 35)" fill="url(#goldGradMask)" />
+        <ellipse cx="50" cy="12" rx="7" ry="14" fill="url(#goldGradMask)" />
+      </g>
+
+      <!-- App Name Banner Text -->
+      <text x="256" y="468" text-anchor="middle" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="900" font-size="34" fill="#ffffff" letter-spacing="2">
+        FARM TRACKER
+      </text>
+    </g>
+  </g>
+</svg>
