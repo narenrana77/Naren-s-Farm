@@ -30,13 +30,21 @@ jobs:
       - name: Install dependencies
         run: npm install --legacy-peer-deps
 
+      - name: TypeScript type-check
+        run: npm run lint
+
       - name: Build Vite production bundle
         env:
           VITE_BASE_PATH: /${{ github.event.repository.name }}/
         run: npm run build
 
+      - name: Add SPA 404 fallback for GitHub Pages
+        run: cp dist/index.html dist/404.html
+
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
