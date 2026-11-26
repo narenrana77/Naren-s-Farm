@@ -1,0 +1,8 @@
+{
+  "appId": "com.narensfarm.tracker",
+  "appName": "Naren's Farm",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  }
+}
